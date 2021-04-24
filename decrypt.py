@@ -3,7 +3,7 @@ from random import randint
 import numpy as np
 import json
 
-myImage = Image.open("D:\\semester 6\\security in computing(64)\\image-encryption\\Image-Encryption-Based-on-Rubiks-Cube\\flower-encrypted.png");
+myImage = Image.open("D:\\semester 6\\security in computing(64)\\Image-encryption-decryption\\flower-encrypted.png");
 width, height = myImage.size
 pixels = myImage.load()
 
@@ -69,8 +69,8 @@ for i in range(height):
                 image[i][l] = image[i][l-1]
             image[i][0] = temp2   
 
-image1 = np.image(image, dtype=np.uint8)
-final_image = Image.fromimage(image1)
-final_image.save('D:\\semester 6\\security in computing(64)\\image-encryption\\Image-Encryption-Based-on-Rubiks-Cube\\flower-decrypt.png')
+image1 = np.array(image, dtype=np.uint8)
+final_image = Image.fromarray(image1)
+final_image.save('D:\\semester 6\\security in computing(64)\\Image-encryption-decryption\\flower-decrypt.png')
 
                

@@ -7,7 +7,7 @@ high = (2**8) - 1
 low = 0
 #print(high, low)
 
-myImage = Image.open("D:\\semester 6\\security in computing(64)\\image-encryption\\Image-Encryption-Based-on-Rubiks-Cube\\flower.jpg");
+myImage = Image.open("D:\\semester 6\\security in computing(64)\\Image-encryption-decryption\\flower.jpg");
 width, height = myImage.size
 pixels = myImage.load()
 print(pixels[0,0])
@@ -85,9 +85,9 @@ for i in range(height):
         else:
             image[i][j] = image[i][j]^Key_Row[height-1-i]
 
-image1 = np.image(image, dtype=np.uint8)
-final_image = Image.fromimage(image1)
-final_image.save('D:\\semester 6\\security in computing(64)\image-encryption\\Image-Encryption-Based-on-Rubiks-Cube\\flower-encrypted.png')
+image1 = np.array(image, dtype=np.uint8)
+final_image = Image.fromarray(image1)
+final_image.save('D:\\semester 6\\security in computing(64)\\Image-encryption-decryption\\flower-encrypted.png')
 
 
 with open("Key_Row.txt", "w") as outfile:
